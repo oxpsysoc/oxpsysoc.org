@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Oxford Psychedelic Society</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Quicksand:ital,wght@0,400;0,700;1,400;1,700&family=Oxygen:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../styles.css?hash=30cb7abf1bf82a5ab9e118f25212e834"></head>
+</head>
+<body class="fadein">
+    <canvas id="glcanvas"></canvas>
+    <script type="text/javascript" src="../static/js/renderer.js?hash=e236ea04c1860ddd1d4f3d122b6ff198"></script>
+
+    <header class="pre-navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="../"><img src="../static/img/about/ops_logo.png" height="40px"></img></a>
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        </div>
+        <!-- Menu -->
+        <ul class="navbar">
+            
+            <li>
+            <a class="button" href="../" onclick="document.getElementById('side-menu').checked = false">Home</a>
+            </li>
+            
+            <li>
+            <a class="button" href="../about/#welcome" onclick="document.getElementById('side-menu').checked = false">Welcome</a>
+            </li>
+            
+            <li>
+            <a class="button" href="../about/#manifesto" onclick="document.getElementById('side-menu').checked = false">Manifesto</a>
+            </li>
+            
+            <li>
+            <a class="button" href="../about/#things-we-do" onclick="document.getElementById('side-menu').checked = false">Things We Do</a>
+            </li>
+            
+            <li>
+            <a class="button" href="../about/#gallery" onclick="document.getElementById('side-menu').checked = false">Gallery</a>
+            </li>
+            
+            <li>
+            <a class="button" href="../about/#donate" onclick="document.getElementById('side-menu').checked = false">Donate</a>
+            </li>
+            
+        </ul>
+    </header>
+
+    <div class="root">
+        <div class="pre-content">
+            <div class="content">
+                <p>This is a test</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript">
+        document.body.classList.remove('fadein');
+        document.body.classList.add('hidden');
+        window.addEventListener('load', function () {
+            document.body.classList.add('fadein');
+            document.body.classList.remove('hidden');
+        });
+    </script>
+</html>
