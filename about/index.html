@@ -6,45 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?display=swap&family=Quicksand:ital,wght@0,400;0,700;1,400;1,700&family=Oxygen:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="../styles.css?hash=30cb7abf1bf82a5ab9e118f25212e834"></head>
+    <link rel="stylesheet" href="../styles.css?hash=7d7859121697393ed1474508b379c3a1">
 </head>
 <body class="fadein">
     <canvas id="glcanvas"></canvas>
     <script type="text/javascript" src="../static/js/renderer.js?hash=e236ea04c1860ddd1d4f3d122b6ff198"></script>
 
     <header class="pre-navbar">
-        <!-- Logo -->
         <div class="logo">
-            <a href="../"><img src="../static/img/about/ops_logo.png" height="40px"></img></a>
-            <!-- Hamburger icon -->
+            <a href="../">
+                <img src="../static/img/about/ops_logo.png" height="40px" alt="OPS Logo"/>
+            </a>
             <input class="side-menu" type="checkbox" id="side-menu"/>
             <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         </div>
-        <!-- Menu -->
         <ul class="navbar">
             
             <li>
-            <a class="button" href="../" onclick="document.getElementById('side-menu').checked = false">Home</a>
+                <a class="button" href="../" onclick="document.getElementById('side-menu').checked = false">Home</a>
             </li>
             
             <li>
-            <a class="button" href="../about/#welcome" onclick="document.getElementById('side-menu').checked = false">Welcome</a>
+                <a class="button" href="../about/#welcome" onclick="document.getElementById('side-menu').checked = false">Welcome</a>
             </li>
             
             <li>
-            <a class="button" href="../about/#manifesto" onclick="document.getElementById('side-menu').checked = false">Manifesto</a>
+                <a class="button" href="../about/#manifesto" onclick="document.getElementById('side-menu').checked = false">Manifesto</a>
             </li>
             
             <li>
-            <a class="button" href="../about/#things-we-do" onclick="document.getElementById('side-menu').checked = false">Things We Do</a>
+                <a class="button" href="../about/#things-we-do" onclick="document.getElementById('side-menu').checked = false">Things We Do</a>
             </li>
             
             <li>
-            <a class="button" href="../about/#gallery" onclick="document.getElementById('side-menu').checked = false">Gallery</a>
+                <a class="button" href="../about/#gallery" onclick="document.getElementById('side-menu').checked = false">Gallery</a>
             </li>
             
             <li>
-            <a class="button" href="../about/#donate" onclick="document.getElementById('side-menu').checked = false">Donate</a>
+                <a class="button" href="../about/#donate" onclick="document.getElementById('side-menu').checked = false">Donate</a>
             </li>
             
         </ul>
@@ -257,10 +256,96 @@ As founders and representatives of psychedelic societies across the globe, we as
 </section>
 
 
+                <h2 style="color: #b80084;">Upcoming Events</h2>
+                
+                <section class="slideshow-container">
+                    
+                    <div class="slide ">
+                        <h2 class="slide-title">Trials of psychedelics in depression: a 10-year overview | Athina Metaxa</h2>
+                        <img class="slide-image" src="../static/img/events/athina.png" alt="Trials of psychedelics in depression: a 10-year overview | Athina Metaxa">
+                        <p class="slide-description">Explore a decade of breakthrough psychedelic trials in depression with Athina Metaxa—data, FDA milestones & next-steps. Buy tickets now!</p>
+                        <a class="event-button" href="https://www.eventbrite.co.uk/e/trials-of-psychedelics-in-depression-a-10-year-overview-athina-metaxa-tickets-1382698340959?aff=oddtdtcreator" target="_blank">Buy Tickets</a>
+                    </div>
+                    
+                    <div class="slide hidden">
+                        <h2 class="slide-title">OPS Presents Visual DJ Workshop</h2>
+                        <img class="slide-image" src="../static/img/events/visualdj.avif" alt="OPS Presents Visual DJ Workshop">
+                        <p class="slide-description">Join a Visual DJ workshop with industry professionals Dotty Clay & Zlata Ponirovskaya—learn the basics and start mixing your own tracks!</p>
+                        <a class="event-button" href="https://www.eventbrite.co.uk/e/ops-presents-visual-dj-workshop-tickets-1378919538459?aff=oddtdtcreator" target="_blank">Buy Tickets</a>
+                    </div>
+                    
+                    <div class="slide hidden">
+                        <h2 class="slide-title">Svarasa Ritual: Guided Meditation with Robot Koch and Naina Eira at OPS</h2>
+                        <img class="slide-image" src="../static/img/events/Guided_Meditation.avif" alt="Svarasa Ritual: Guided Meditation with Robot Koch and Naina Eira at OPS">
+                        <p class="slide-description">The Oxford Psychedelic Society is excited to present a unique meditation experience with award-winning composer Robot Koch and Naina Eira.</p>
+                        <a class="event-button" href="https://www.eventbrite.co.uk/e/svarasa-ritual-guided-meditation-with-robot-koch-and-naina-eira-at-ops-tickets-1390578029319?aff=oddtdtcreator" target="_blank">Buy Tickets</a>
+                    </div>
+                    
+                
+                    <!-- Navigation Arrows -->
+                    <button class="arrow arrow-left" onclick="previousSlide()">&#10094;</button>
+                    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+                
+                    <!-- Navigation Dots -->
+                    <div class="slideshow-nav">
+                        
+                        <button 
+                            class="nav-dot active" 
+                            data-index="0">
+                        </button>
+                        
+                        <button 
+                            class="nav-dot " 
+                            data-index="1">
+                        </button>
+                        
+                        <button 
+                            class="nav-dot " 
+                            data-index="2">
+                        </button>
+                        
+                    </div>
+                </section>
+
+                <script>
+                    let current = 0;
+                    let slides, dots;
+
+                    window.addEventListener("load", () => {
+                        slides = document.querySelectorAll('.slide');
+                        dots = document.querySelectorAll('.nav-dot');
+
+                        if (slides.length > 1) {
+                            setInterval(() => {
+                                nextSlide();
+                            }, 5000);
+                        }
+                    });
+
+                    function nextSlide() {
+                        slides[current].classList.add('hidden');
+                        dots[current].classList.remove('active');
+                        current = (current + 1) % slides.length;
+                        slides[current].classList.remove('hidden');
+                        dots[current].classList.add('active');
+                    }
+
+                    function showSlide(index) {
+                        if (index === current) return;
+                        slides[current].classList.add('hidden');
+                        dots[current].classList.remove('active');
+                        current = index;
+                        slides[current].classList.remove('hidden');
+                        dots[current].classList.add('active');
+                    }
+                </script>
+                
+
+                
             </div>
-        </div>
+        </div>    
     </div>
-</body>
+
     <script type="text/javascript">
         document.body.classList.remove('fadein');
         document.body.classList.add('hidden');
@@ -269,4 +354,5 @@ As founders and representatives of psychedelic societies across the globe, we as
             document.body.classList.remove('hidden');
         });
     </script>
+</body>
 </html>
