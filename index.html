@@ -61,6 +61,76 @@
 
                 <h2 style="color: #b80084;">Upcoming Events</h2>
                 
+                <section class="slideshow-container">
+                    
+                    <div class="slide ">
+                        <h2 class="slide-title">Sound journey: Geometry and Psychedelism of Ancient Indian Sound Wisdom</h2>
+                        <img class="slide-image" src="/static/img/events/tritha.jpg" alt="Sound journey: Geometry and Psychedelism of Ancient Indian Sound Wisdom">
+                        <p class="slide-description">Tritha is an award-winning classical and contemporary Indian singer and composer (also known as a Sound Yogini). She will give a short synopsis on the sacred geometry of Indian ancient sound and the psychedelic nature of ancient Indian raagas and mantras benefitting physical and mental health. We are excited to host Tritha during her current Europe tour and hope you can join us for this unique opportunity! 🍃</p>
+                        <a class="event-button" href="https://www.eventbrite.co.uk/e/sound-journey-geometry-and-psychedelism-of-ancient-indian-sound-wisdom-tickets-1815972284989" target="_blank">Buy Tickets</a>
+                    </div>
+                    
+                    <div class="slide hidden">
+                        <h2 class="slide-title">Workshop: Geometry and Psychedelism of Ancient Indian Sound Wisdom</h2>
+                        <img class="slide-image" src="/static/img/events/tritha.jpg" alt="Workshop: Geometry and Psychedelism of Ancient Indian Sound Wisdom">
+                        <p class="slide-description">Tritha is an award-winning classical and contemporary Indian singer and composer (also known as a Sound Yogini). In this interactive session, participants learn how specific sound frequencies can energize and harmonize body, mind and spirit, using breath and vocals. It is a sound meditation using voice based on ancient Indian wisdom and quantum physics of sound and fractal sound dynamics. We are excited to host Tritha during her current Europe tour and hope you can join us for this unique opportunity! 🍃</p>
+                        <a class="event-button" href="https://www.eventbrite.co.uk/e/workshop-geometry-and-psychedelism-of-ancient-indian-sound-wisdom-tickets-1815983949879" target="_blank">Buy Tickets</a>
+                    </div>
+                    
+                
+                    <!-- Navigation Arrows -->
+                    <button class="arrow arrow-left" onclick="previousSlide()">&#10094;</button>
+                    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+                
+                    <!-- Navigation Dots -->
+                    <div class="slideshow-nav">
+                        
+                        <button 
+                            class="nav-dot active" 
+                            data-index="0">
+                        </button>
+                        
+                        <button 
+                            class="nav-dot " 
+                            data-index="1">
+                        </button>
+                        
+                    </div>
+                </section>
+
+                <script>
+                    let current = 0;
+                    let slides, dots;
+
+                    window.addEventListener("load", () => {
+                        slides = document.querySelectorAll('.slide');
+                        dots = document.querySelectorAll('.nav-dot');
+
+                        if (slides.length > 1) {
+                            setInterval(() => {
+                                nextSlide();
+                            }, 7500);
+                        }
+                    });
+
+                    function nextSlide() {
+                        slides[current].classList.add('hidden');
+                        dots[current].classList.remove('active');
+                        current = (current + 1) % slides.length;
+                        slides[current].classList.remove('hidden');
+                        dots[current].classList.add('active');
+                    }
+
+                    function showSlide(index) {
+                        if (index === current) return;
+                        slides[current].classList.add('hidden');
+                        dots[current].classList.remove('active');
+                        current = index;
+                        slides[current].classList.remove('hidden');
+                        dots[current].classList.add('active');
+                    }
+                </script>
+                
 
                 <h1><span class="headerlink" id="term-card">   </span><a href="#term-card">Term Card</a></h1>
 <p>This is our term card for Trinity Term 2025:</p>
