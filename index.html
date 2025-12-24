@@ -61,64 +61,6 @@
 
                 <h2 style="color: #b80084;">Upcoming Events</h2>
                 
-                <section class="slideshow-container">
-                    
-                    <div class="slide ">
-                        <h2 class="slide-title">OPS&OUEMS Present: Electrodelica</h2>
-                        <img class="slide-image" src="/static/img/events/electrodelica.jpg" alt="OPS&OUEMS Present: Electrodelica">
-                        <p class="slide-description">The Oxford Psychedelic Society and the OU Electronic Music Society are excited to invite you to Electrodelica, our biggest party of the term 🔊 We hand-picked hours of bass-heavy psychedelic percussion, led by our DJs Wotunaz, interpretr B2B, Mossambi and squidj. Join us on Wed, Nov 5, at the Bullingdon. Get your tickets soon!</p>
-                        <a class="event-button" href="https://ra.co/events/2288603" target="_blank">Buy Tickets</a>
-                    </div>
-                    
-                
-                    <!-- Navigation Arrows -->
-                    <button class="arrow arrow-left" onclick="previousSlide()">&#10094;</button>
-                    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
-                
-                    <!-- Navigation Dots -->
-                    <div class="slideshow-nav">
-                        
-                        <button 
-                            class="nav-dot active" 
-                            data-index="0">
-                        </button>
-                        
-                    </div>
-                </section>
-
-                <script>
-                    let current = 0;
-                    let slides, dots;
-
-                    window.addEventListener("load", () => {
-                        slides = document.querySelectorAll('.slide');
-                        dots = document.querySelectorAll('.nav-dot');
-
-                        if (slides.length > 1) {
-                            setInterval(() => {
-                                nextSlide();
-                            }, 7500);
-                        }
-                    });
-
-                    function nextSlide() {
-                        slides[current].classList.add('hidden');
-                        dots[current].classList.remove('active');
-                        current = (current + 1) % slides.length;
-                        slides[current].classList.remove('hidden');
-                        dots[current].classList.add('active');
-                    }
-
-                    function showSlide(index) {
-                        if (index === current) return;
-                        slides[current].classList.add('hidden');
-                        dots[current].classList.remove('active');
-                        current = index;
-                        slides[current].classList.remove('hidden');
-                        dots[current].classList.add('active');
-                    }
-                </script>
-                
 
                 <h1><span class="headerlink" id="term-card">   </span><a href="#term-card">Term Card</a></h1>
 <p>This is our term card for Trinity Term 2025:</p>
