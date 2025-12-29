@@ -156,7 +156,7 @@ img { object-fit: contain; filter: drop-shadow(5px 2px 6px #000000); }
 
 .nav-dot.active { background-color: #ff0dbb; }
 
-.arrow { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.4); color: white; border: none; font-size: 2rem; cursor: pointer; padding: 0.5rem 1rem; border-radius: 4px; z-index: 2; }
+.arrow { position: absolute; top: 50vh; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.4); color: white; border: none; font-size: 2rem; cursor: pointer; padding: 0.5rem 1rem; border-radius: 4px; z-index: 2; }
 
 .arrow-left { left: 10px; }
 
