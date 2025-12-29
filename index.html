@@ -61,6 +61,64 @@
 
                 <h2 style="color: #b80084;">Upcoming Events</h2>
                 
+                <section class="slideshow-container">
+                    
+                    <div class="slide ">
+                        <h2 class="slide-title">OPS Presents: Eyeball</h2>
+                        <img class="slide-image" src="/static/img/events/eyeball.jpg" alt="OPS Presents: Eyeball">
+                        <p class="slide-description">Open your eyes, open your mind. EyeBall is a psychedelic journey through shadow, sound, and light. Follow the DJs as they guide you from the underworld into liberation, lose yourself in otherworldly visuals, and let us adorn your face with glowing eyes. Are you ready to see beyond?</p>
+                        <a class="event-button" href="https://ra.co/events/2329355" target="_blank">Buy Tickets</a>
+                    </div>
+                    
+                
+                    <!-- Navigation Arrows -->
+                    <button class="arrow arrow-left" onclick="previousSlide()">&#10094;</button>
+                    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+                
+                    <!-- Navigation Dots -->
+                    <div class="slideshow-nav">
+                        
+                        <button 
+                            class="nav-dot active" 
+                            data-index="0">
+                        </button>
+                        
+                    </div>
+                </section>
+
+                <script>
+                    let current = 0;
+                    let slides, dots;
+
+                    window.addEventListener("load", () => {
+                        slides = document.querySelectorAll('.slide');
+                        dots = document.querySelectorAll('.nav-dot');
+
+                        if (slides.length > 1) {
+                            setInterval(() => {
+                                nextSlide();
+                            }, 7500);
+                        }
+                    });
+
+                    function nextSlide() {
+                        slides[current].classList.add('hidden');
+                        dots[current].classList.remove('active');
+                        current = (current + 1) % slides.length;
+                        slides[current].classList.remove('hidden');
+                        dots[current].classList.add('active');
+                    }
+
+                    function showSlide(index) {
+                        if (index === current) return;
+                        slides[current].classList.add('hidden');
+                        dots[current].classList.remove('active');
+                        current = index;
+                        slides[current].classList.remove('hidden');
+                        dots[current].classList.add('active');
+                    }
+                </script>
+                
 
                 <h1><span class="headerlink" id="term-card">   </span><a href="#term-card">Term Card</a></h1>
 <p>This is our term card for Trinity Term 2025:</p>
