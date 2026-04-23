@@ -254,6 +254,53 @@ As founders and representatives of psychedelic societies across the globe, we as
 
 
                 
+                <!-- <h2 style="color: #b80084;">Upcoming Events</h2> -->
+                <section class="slideshow-container">
+                    
+                    <div class="slide ">
+                        <h2 class="slide-title">OU LGBTQ+ x OPS Present: Queer Ecstasy</h2>
+                        <img class="slide-image" src="../static/img/events/queer_ecstasy_TT26.jpg" alt="OU LGBTQ+ x OPS Present: Queer Ecstasy">
+                        <p class="slide-description"></p>
+                        <a class="event-button" href="https://www.instagram.com/queer.ecstasy/" target="_blank">Buy Tickets</a>
+                    </div>
+                    
+                
+                    
+                </section>
+
+                <script>
+                    let current = 0;
+                    let slides, dots;
+
+                    window.addEventListener("load", () => {
+                        slides = document.querySelectorAll('.slide');
+                        dots = document.querySelectorAll('.nav-dot');
+
+                        if (slides.length > 1) {
+                            setInterval(() => {
+                                nextSlide();
+                            }, 7500);
+                        }
+                    });
+
+                    function nextSlide() {
+                        slides[current].classList.add('hidden');
+                        dots[current].classList.remove('active');
+                        current = (current + 1) % slides.length;
+                        slides[current].classList.remove('hidden');
+                        dots[current].classList.add('active');
+                    }
+
+                    function showSlide(index) {
+                        if (index === current) return;
+                        slides[current].classList.add('hidden');
+                        dots[current].classList.remove('active');
+                        current = index;
+                        slides[current].classList.remove('hidden');
+                        dots[current].classList.add('active');
+                    }
+                </script>
+                
 
                 
             </div>
